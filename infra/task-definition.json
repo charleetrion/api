@@ -1,0 +1,99 @@
+{
+    "taskDefinitionArn": "arn:aws:ecs:us-east-1:905418384243:task-definition/authmicroserviceTasauthmicroservice0FB935C8:2",
+    "containerDefinitions": [
+        {
+            "name": "auth-microservice",
+            "image": "905418384243.dkr.ecr.us-east-1.amazonaws.com/auth-microservice:latest",
+            "cpu": 0,
+            "memoryReservation": 512,
+            "links": [],
+            "portMappings": [
+                {
+                    "containerPort": 8000,
+                    "hostPort": 80,
+                    "protocol": "tcp"
+                }
+            ],
+            "essential": true,
+            "entryPoint": [],
+            "command": [],
+            "environment": [
+                {
+                    "name": "PORT",
+                    "value": "8000"
+                },
+                {
+                    "name": "AWS_REGION",
+                    "value": "us-east-1"
+                }
+            ],
+            "environmentFiles": [],
+            "mountPoints": [],
+            "volumesFrom": [],
+            "secrets": [],
+            "dnsServers": [],
+            "dnsSearchDomains": [],
+            "extraHosts": [],
+            "dockerSecurityOptions": [],
+            "dockerLabels": {},
+            "ulimits": [],
+            "logConfiguration": {
+                "logDriver": "awslogs",
+                "options": {
+                    "awslogs-group": "auth-microservice-TasauthmicroserviceLogGroupCC0F3867-pw8E0XN8BtfO",
+                    "awslogs-region": "us-east-1",
+                    "awslogs-stream-prefix": "abatech-auth-microservice"
+                },
+                "secretOptions": []
+            },
+            "systemControls": [],
+            "credentialSpecs": []
+        }
+    ],
+    "family": "authmicroserviceTasauthmicroservice0FB935C8",
+    "taskRoleArn": "arn:aws:iam::905418384243:role/auth-microservice-TasauthmicroserviceTaskRoleCC7484-m1iLLsXmZ8Vz",
+    "executionRoleArn": "arn:aws:iam::905418384243:role/auth-microservice-TasauthmicroserviceExecutionRole7-TqrHYSjpMLjU",
+    "networkMode": "bridge",
+    "revision": 2,
+    "volumes": [],
+    "status": "ACTIVE",
+    "requiresAttributes": [
+        {
+            "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+        },
+        {
+            "name": "ecs.capability.execution-role-awslogs"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.ecr-auth"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.17"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.task-iam-role"
+        },
+        {
+            "name": "ecs.capability.execution-role-ecr-pull"
+        },
+        {
+            "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
+        }
+    ],
+    "placementConstraints": [],
+    "compatibilities": [
+        "EXTERNAL",
+        "EC2"
+    ],
+    "requiresCompatibilities": [
+        "EC2"
+    ],
+    "registeredAt": "2024-08-11T21:25:44.563000-05:00",
+    "registeredBy": "arn:aws:sts::905418384243:assumed-role/cdk-hnb659fds-cfn-exec-role-905418384243-us-east-1/AWSCloudFormation"
+}
