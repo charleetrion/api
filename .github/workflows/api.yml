@@ -80,4 +80,4 @@ jobs:
           LAMBDA=${{ env.LAMBDA }}
           LAMBDA_URI_IMAGE=${{ env.ECR_IMAGE_URI }}
           cdk deploy ${{ env.STACK_NAME }} -c config=${{ env.LAMBDA_CONFIG_URI }} --require-approval never
-          aws lambda update-function-code --function-name ${{ env.LAMBDA_NAME }} --image-uri 273354645944.dkr.ecr.us-east-1.amazonaws.com/${{env.ECR_REPOSITORY_DEV}}:latest
+          aws lambda update-function-code --function-name ${{ env.LAMBDA_NAME }} --image-uri 390403883664.dkr.ecr.us-east-1.amazonaws.com/${{env.ECR_REPOSITORY_DEV}}:latest
